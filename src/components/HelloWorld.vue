@@ -1,8 +1,8 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <p>{{ description }}</p>
-    <input type="text" v-model="description">
+    <input type="text" v-model="task" />
+    <button @click="onClick">Add</button>
   </div>
 </template>
 
@@ -16,7 +16,16 @@ export default {
 
   data() {
     return {
-      description: 'A short description'
+      task: 'A short description',
+      list: []
+    }
+  },
+
+  methods: {
+    onClick() {
+      this.list.push(this.task)
+      this.task = ''
+      console.log(this.list)
     }
   }
 };
