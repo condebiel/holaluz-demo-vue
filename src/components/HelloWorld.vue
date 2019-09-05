@@ -3,6 +3,11 @@
     <h1>{{ msg }}</h1>
     <input type="text" v-model="task" />
     <button @click="onClick">Add</button>
+    <ul>
+      <li v-for="item in list" :key="item">
+        {{ item }}
+      </li>
+    </ul>
   </div>
 </template>
 
