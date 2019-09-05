@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <p>{{ description }}</p>
   </div>
 </template>
 
@@ -10,6 +11,12 @@ export default {
 
   props: {
     msg: String
+  },
+
+  data() {
+    return {
+      description: 'A short description'
+    }
   }
 };
 </script>
