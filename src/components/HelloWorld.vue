@@ -2,6 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p>{{ description }}</p>
+    <input type="text" v-model="description">
   </div>
 </template>
 
