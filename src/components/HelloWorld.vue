@@ -3,11 +3,11 @@
     <h1>{{ msg }}</h1>
     <input type="text" v-model="task" />
     <button @click="onClick">Add</button>
-    <ul>
-      <li v-for="item in list" :key="item">
-        {{ item }}
+    <ol>
+      <li v-for="(item, index) in list" :key="item">
+        <span v-if="index % 2 === 0">{{ item }}</span>
       </li>
-    </ul>
+    </ol>
   </div>
 </template>
 
