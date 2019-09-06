@@ -1,8 +1,12 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <input type="text" v-model="task" />
-    <button @click="onClick">Add</button>
+    <ma-text
+      label="Some label"
+      placeholder="Another placeholder"
+      v-model="task"
+    />
+    <ma-button @click="onClick">Add</ma-button>
     <ol>
       <li v-for="(item, index) in list" :key="item">
         <span v-if="index % 2 === 0">{{ item }}</span>
