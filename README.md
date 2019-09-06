@@ -1,4 +1,5 @@
 # holaluz-demo-vue
+This repository is part of an internal training in Holaluz
 
 ## Project setup
 ```
