@@ -16,6 +16,8 @@
 </template>
 
 <script>
+import { mapState, mapActions } from 'vuex'
+
 export default {
   name: "HelloWorld",
 
@@ -25,16 +27,20 @@ export default {
 
   data() {
     return {
-      task: 'A short description',
-      list: []
+      task: 'A short description'
     }
   },
 
+  computed: {
+    ...mapState(['list'])
+  },
+
   methods: {
+    ...mapActions(['addItem']),
+
     onClick() {
-      this.list.push(this.task)
+      this.addItem(this.task)
       this.task = ''
-      console.log(this.list)
     }
   }
 };
