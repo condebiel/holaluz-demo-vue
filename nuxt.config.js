@@ -23,11 +23,13 @@ export default {
   ** Global CSS
   */
   css: [
+    '@holaluz/margarita/dist/margarita.css',
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    './plugins/margarita.js',
   ],
   /*
   ** Nuxt.js dev-modules
