@@ -1,19 +1,8 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <ma-text
-      :hasError="false"
-      :label="'Some label'"
-      :placeholder="'Some placeholder'"
-      v-model="task"
-      @blur="onClick"
-    />
-     <ma-button
-      @click="onClick"
-      :text="'Add'"
-      category="primary"
-    />
-    <ma-button @click="onClick">Add</ma-button>
+    <input type="text" v-model="task" />
+    <button @click="onClick">Add</button>
     <ol>
       <li v-for="(item, index) in list" :key="item">
         <span v-if="index % 2 === 0">{{ item }}</span>
@@ -32,7 +21,7 @@ export default {
 
   data() {
     return {
-      task: null,
+      task: 'A short description',
       list: []
     }
   },
